@@ -57,8 +57,8 @@ all: mock-ia.pdf mock-ib.pdf
 
 mock-ia.pdf: \
 	tripos.cls \
-	ia-1-foundations.tex ia-2-oop.tex  ia-3-digital-electronics.tex  ia-4-operating-systems.tex \
-        ia-5-discrete-mathematics.tex  ia-6-databases.tex  ia-7-intro-graphics.tex
+	ia-1-foundations.tex ia-2-oop.tex  ia-3-digital-electronics.tex \
+        ia-4-discrete-mathematics.tex  ia-5-databases.tex  ia-6-intro-graphics.tex
 
 mock-ib.pdf: \
 	tripos.cls \

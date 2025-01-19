@@ -1,8 +1,35 @@
 \documentclass{tripos}
 \begin{document}
 \begin{question}[MockIA,year=2025,paper=2,question=3,author=nobody]{Concurrent and Distributed Systems}
-\emph{\ldots Awaiting question 3 on Concurrent and Distributed Systems}
+%%\emph{\ldots Awaiting question 3 on Concurrent and Distributed Systems}
 \triposset{fullmarks=20}
-\typeout{Awaiting question 3 on Concurrent and Distributed Systems}
+\topic{Concurrent and Distributed Systems}
+
+\begin{enumerate}
+\item Give pseudocode for a fair, recursive, MRSW lock using RISC-V \verb|lr|/\verb|sc| semantics and yield:
+
+\begin{verbatim}
+  lr.w t0, (a0)   # Load-linked from (a0) to t0
+
+  sc.w t0, a2, (a0) # Attempt to write the value a2 to (a0)
+                    # and release the reservation. If you succeeded,
+                    # set t0=0, else set t0!=0.
+
+  yield(a0)         # Yield until a0 is (possibly) touched.
+
+\end{verbatim}
+\fullmarks{6}
+
+\item What would you expect to happen to a busy, multicore ($>$ 32
+  thread) system as the reservation area occupied by an \verb|lr|
+  instruction increases? State what you would measure and give
+  numerical estimates.  \fullmarks{2}
+
+\item Outline the design of a (simple, but nontrivial) gossip algorithm. Describe what control messages and algorithms you might use to maintain the mesh, including how you might implement total-order FIFO message delivery on top of it. Does your mesh maintenance algorithm require total order message delivery? \fullmarks{8}
+
+\item You want to connect two mutually distrustful distributed transaction processing systems together, with one performing operations on the other. To what extent is this possible, how do you do it and what requirements do you need to place on each system? (note that neither is prepared to block its transactions for the other). \fullmarks{4}
+
+ \end{enumerate}
+%%\typeout{Awaiting question 3 on Concurrent and Distributed Systems}
 \end{question}
 \end{document}

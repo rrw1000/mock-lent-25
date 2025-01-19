@@ -1,8 +1,38 @@
 \documentclass{tripos}
 \begin{document}
 \begin{question}[MockIA,year=2025,paper=1,question=1,author=nobody]{Foundations Of Computer Science}
-\emph{\ldots Awaiting question 1 on Foundations of Computer Science}
+%\emph{\ldots Awaiting question 1 on Foundations of Computer Science}
 \triposset{fullmarks=20}
-\typeout{Awaiting question 1 on Foundations of Computer Science}
+%\typeout{Awaiting question 1 on Foundations of Computer Science}
+\topic{Foundations of Computer Science}
+
+We can define a game in Ocaml with a pair of type definitions like:
+
+\begin{verbatim}
+type 'a movelist = NextMove of 'a * (unit -> 'a movelist)
+  | MoveNone;;
+type ('a, 'b) game = ('a -> 'b -> 'b movelist) * ('a -> 'b -> bool);;
+\end{verbatim}
+
+The first function in \verb|game| takes a player and a game state and produces a functional list of next moves.
+The second takes a player and game state and tells you if they won or not.
+
+There is a game called nim which, for these purposes will be played like this:
+
+\begin{itemize}
+\item There are a number of piles each containing an integer number of items.
+\item In each round, each player takes an item from the pile of their choice.
+\item The player who takes the last item from any pile (reducing that pile to 0 items) wins the game.
+\end{itemize}
+
+\begin{enumerate}
+\item Write a function \verb|winner:'a -> 'b -> bool| which tells you if a player can win the game from a state. \fullmarks{3}
+\item Write a function \verb|moves:'a -> 'b -> 'b movelist| which constructs a set of valid moves for a player. \fullmarks{4}
+\item Write a function \verb|search game players state| which finds all possible wins. \fullmarks{8}
+\item Now write a function \verb|best game players state| which finds the first possible winner [hint: try not to be clever - the obvious strategy is fine]. \fullmarks{4}
+\item Estimate the big-O complexity of your answer to part (d) \fullmarks{1}
+\end{enumerate}
+
+\eject
 \end{question}
 \end{document}

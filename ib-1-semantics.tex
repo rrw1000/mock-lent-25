@@ -1,8 +1,26 @@
 \documentclass{tripos}
 \begin{document}
 \begin{question}[MockIA,year=2025,paper=2,question=1,author=nobody]{Semantics of Programming Languages}
-\emph{\ldots Awaiting question 1 on Semantics of Programming Languages}
-\triposset{fullmarks=20}
-\typeout{Awaiting question 1 on Semantics of Programming Languages}
+%%\emph{\ldots Awaiting question 1 on Semantics of Programming Languages}
+  \triposset{fullmarks=20}
+  \topic{Semantics}
+
+  Consider a simple machine code language:
+
+\begin{verbatim}
+ add rd,r0,r1  # add (signed) r0 and r1, put them in rd.
+ mov rd,#<imm> # load rd with the immediate
+ lw rd, r1     # load rd from the address pointed to by r1
+ sw rd, r1     # store rd in the address pointed to by r1
+ beqb r0,r1,r2 # compare r0 and r1. If equal, branch to r2
+\end{verbatim}
+
+\begin{enumerate}
+\item Write an operational semantics for the basic machine code operands. Choose a suitable mathematical representation for memory and the register file \fullmarks{6}
+\item We model subroutines by creating \verb|call| and \verb|return| macros, using \verb|r2| as the stack pointer. Design a suitable stack frame format and write operational semantics for \verb|call| and \verb|return| \fullmarks{4}
+\item We suppose that immediate values can be annotated with types such as \verb|number|, \verb|memory-offset| or \verb|memory-location| and instructions with (optional) type coercions. Write a set of typing rules for your expanded assembler and prove progress for your rules. Think carefully about how to type values loaded from memory locations to which you have not previously stored. \fullmarks{6}
+\item Coercions from \verb|number| to \verb|memory-offset| are problematic (why?). What assembler pseudo-ops would you add to the language to make these coercions safer? Could you do without these and what mechanisms would be required to make the result safe? What sorts of data structures might no longer be allowed? \fullmarks{4}
+\end{enumerate}
+%%\typeout{Awaiting question 1 on Semantics of Programming Languages}
 \end{question}
 \end{document}

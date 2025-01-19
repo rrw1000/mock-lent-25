@@ -1,8 +1,47 @@
 \documentclass{tripos}
 \begin{document}
 \begin{question}[MockIA,year=2025,paper=2,question=7,author=nobody]{Further Graphics}
-\emph{\ldots Awaiting question 7 on Further Graphics}
-\triposset{fullmarks=20}
-\typeout{Awaiting question 7 on Further Graphics}
+%%\emph{\ldots Awaiting question 7 on Further Graphics}
+  \triposset{fullmarks=20}
+  \topic{Further Graphics}
+  \begin{enumerate}
+\item Compute the normal of the parametric surface
+  \[
+  x = uv\cos2\pi
+  \]
+  \[
+  y = (u+v)\sin 2\pi
+  \]
+  \[
+  z = u\cos \pi
+  \]
+  \fullmarks{4}
+
+\item What is the implication for importance sampling of working with a very nonconformally mapped model?
+  \fullmarks{2}
+\item Recall that, for quaternions:
+  \[
+  \mathbf{q}^t = e^{t \log \mathbf{q}}
+  \]
+  \[
+  \log \mathbf{q} = \frac{\theta}{2}.\mathbf{s}
+  \]
+  \[
+  e^{\mathbf{q}} = \cos \|\mathbf{q}\| + \frac{\mathbf{q}}{\|\mathbf{q}\|}\sin \|\mathbf{q}\|
+  \]
+  Show that spherical blending ($(\mathbf{q}_2\mathbf{q}_1^*)\mathbf{q}_1$) interpolates two quaternion rotations. \fullmarks{4}
+
+\item Hence, or otherwise, show that a convex mesh attached to a spherical blend of the rotations of two connected bones cannot become concave by the rotation of the bones.
+  \fullmarks{5}
+
+\item For a given scene, assume the rendering equation can be reduced to $L_0(\mathbf{x}, \vec{w}_0) = c \int_{H^2} V(\mathbf{x}, \vec{w}_i)cos \theta_i d\vec{w}_i$ at points $\mathbf{x}$ where $V$ is the binary visibility function.
+  \begin{enumerate}
+  \item What are the properties of the scene that make this reduction possible? \fullmarks{3}
+  \item Assuming a single object and ignoring inter-reflections for that object, what
+    is the gradient of $L_0(\mathbf{x}, \vec{w}_0)$ with respect to $x$? \fullmarks{2}
+  \end{enumerate}  
+\end{enumerate}
+
+%%\typeout{Awaiting question 7 on Further Graphics}
 \end{question}
 \end{document}

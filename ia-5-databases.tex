@@ -1,0 +1,29 @@
+\documentclass{tripos}
+\begin{document}
+\begin{question}[MockIA,year=2025,paper=1,question=6,author=nobody]{Databases}
+%\emph{\ldots Awaiting question 6 on Databases}
+  \triposset{fullmarks=20}
+  \topic{Databases}
+
+  You are working for a company that issues mortgages.\\
+  Each mortgage is a record of a loan against a property.\\
+  All mortgages are registered in the same currency (GBP).\\
+  Mortgages are taken out for a fixed sum, but this balance may be increased by additional borrowing or reduced by early repayments.\\
+  The term of each mortgage is fixed and cannot be changed. There can be only one property at at time against which the mortgage is advanced, but mortgages can be moved between properties.\\
+  Interest is charged monthly at one of a set of rates which can be adjusted from time to time. At 00:01 on the first day of each month, the monthly interest for each mortgage is added to the mortgage balance.\\
+  Mortgage payments are charged as a payment which, if taken every month until the end of the mortgage term, will pay off the mortgage by the end of the term.\\
+  Mortgage brokers are paid a fixed commission (which may change over time) of the mortgage's initial sum; no further payments or adjustments are sent to them.\\
+  Mortgage brokers and mortgage holders are identified by a name and address.\\
+  \begin{enumerate}
+  \item Draw an entity-relationship diagram for a database of mortgages. \fullmarks{5}
+  \item Write down SQL DDL expressions for the tables in this database. \fullmarks{3}
+  \item Write down an SQL expression to extract the names of all mortgage holders who are associated (mortgage holders or who have addresses on which a mortgage is taken out) with more than one property. What problems do you see extending this to more than N properties, where N is a query parameter?\fullmarks{2}
+  \item You are now told that your database is eventually consistent. Adapt your database to cope with this so that, so long as the inputs to the database are eventually correct, the mortgage balances will be so too. Note that {\em any} piece of input data, including historical interest rates, may be updated. \fullmarks{3}
+  \item How might you make queries of mortgage balances fast in this case, and what risks are attached to this? \fullmarks{1}
+  \item How would you represent this data in a network database? \fullmarks{4}
+  \item Write a network database expression to extract your exposure ratio - the ratio of expected future payments to total current lending; you may use any convenient network database query language, or invent a reasonable pseudolanguage \fullmarks{2}
+  \end{enumerate}
+%\typeout{Awaiting question 6 on Databases}
+\end{question}
+\eject
+\end{document}

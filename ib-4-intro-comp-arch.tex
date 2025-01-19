@@ -1,8 +1,35 @@
 \documentclass{tripos}
 \begin{document}
 \begin{question}[MockIA,year=2025,paper=2,question=4,author=nobody]{Introduction to Computer Architecture}
-\emph{\ldots Awaiting question 4 on Introduction to Computer Architecture}
-\triposset{fullmarks=20}
-\typeout{Awaiting question 4 on Introduction to Computer Architecture}
+%%\emph{\ldots Awaiting question 4 on Introduction to Computer Architecture}
+  \triposset{fullmarks=20}
+  \topic{Introduction to Computer Architecture}
+
+  \begin{enumerate}
+  \item Design a branch predictor for a single-issue RISC-V processor
+    with a 5-stage pipeline, a 32KiB direct-mapped instruction cache
+    and a 128-entry software-filled TLB.  Comment on your design
+    parameters and algorithm. Estimate how effective your branch
+    predictor might be and outline what you inferred about the
+    transistor budget for this processor; what would you do if the
+    transistor budget was quite large?.  \fullmarks{6}
+
+  \item Outline how host memory access is arranged on a GPU, and design a simple
+    coprocessor for handling it. How might the coprocessor interact with both the
+    host driver and other GPU subsystems in order to improve latency?
+    \fullmarks{8}
+
+  \item Outline inclusive, exclusive and non-inclusive, non-exclusive cache eviction strategies.
+     When is each useful in a multicore, heirarchical-cache system (and why)?
+     \fullmarks{4}
+
+   \item It is proposed to rename registers on input to the CPU in part (a) in order to provide for a
+     larger register file on the chip; how might you do this? Do you think it is a good idea?
+     \fullmarks{2}
+  \end{enumerate}
+  
+ 
+%%\typeout{Awaiting question 4 on Introduction to Computer Architecture}
 \end{question}
+\eject
 \end{document}

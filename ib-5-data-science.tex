@@ -1,8 +1,36 @@
 \documentclass{tripos}
 \begin{document}
 \begin{question}[MockIA,year=2025,paper=2,question=5,author=nobody]{Data Science}
-\emph{\ldots Awaiting question 5 on Data Science}
-\triposset{fullmarks=20}
-\typeout{Awaiting question 5 on Data Science}
-\end{question}
+%%\emph{\ldots Awaiting question 5 on Data Science}
+  \triposset{fullmarks=20}
+  \topic{Data Science}
+
+  \begin{enumerate}
+  \item Let $X_0, X_1, X_2, ...$ be a mean-reverting random walk - a Markov chain
+    \[
+    X_i = \mu + \lambda{}(X_{i-1}-\mu) + N(0,\sigma^2) \mbox{where} -1 < \lambda < 1
+    \]
+The stationary distribution for this process is a Normal distribution. Find its parameters.
+\fullmarks{8}
+
+\item We sample $x_1,...,x_n$ from $\mbox{Uniform}[0,\theta]$. $\theta$ is unknown. Using
+  $\Theta \equiv \mbox{Pareto}(b_0, a_0)$ as the prior, where $b_0 > 0$ and $a_0 > 1$, with
+  CDF
+
+  \[
+  \mathbb{P}(\Theta \le 0) = \begin{cases}
+    1-{(b_0/\theta{})}^{a_0} & if \theta \ge b_0 \\
+    0 & if \theta < b_0
+  \end{cases}
+  \]
+
+  \begin{enumerate}
+  \item Calculate the prior likelihood for $\Theta$. \fullmarks{4}
+  \item Show that the posterior distribution $(\Theta | x_1,...,x_n)$ is Pareto and find its parameters \fullmarks{4}
+  \item Find a 90\% posterior confidence interval for $\Theta{}$. \fullmarks{4}
+  \end{enumerate}
+\end{enumerate}
+%%\typeout{Awaiting question 5 on Data Science}
+  \end{question}
+  \eject
 \end{document}

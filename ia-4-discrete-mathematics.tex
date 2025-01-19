@@ -1,0 +1,48 @@
+\documentclass{tripos}
+\begin{document}
+\begin{question}[MockIA,year=2025,paper=1,question=5,author=nobody]{Discrete Mathematics}
+%\emph{\ldots Awaiting question 5 on Discrete Mathematics}
+\triposset{fullmarks=20}
+\topic{Discrete Mathematics}
+
+\begin{enumerate}
+  \item Let $U$ be a set and let ${\mathcal P}(U)$ denote its powerset.
+For ${\mathcal F} \subseteq {\mathcal P}(U)$ define ${\mathcal G} \subseteq {\mathcal P}(U)$ as $\{ X \subseteq U\ |\ \forall S \in {\mathcal F}. S \subseteq X\}$.
+Prove that $\bigcup {\mathcal F} = \bigcap {\mathcal G}$. \fullmarks{4}
+\item
+  \begin{enumerate}
+  \item State Fermat's little theorem \fullmarks{2}
+  \item Prove that for all natural numbers $m$ and $n$, and for all prime numbers $p$ if $m \equiv n (\mbox{mod}(p-1))$ then $\forall k \in \mathbb{N}. k^m \equiv k^n (\mbox{mod}\ p)$.\fullmarks{6}
+  \end{enumerate}
+
+\item Let $C(X,Y) = \{ S \subseteq X | S \cong Y \}$.
+  \begin{enumerate}
+  \item For finite sets $X$ and $Y$, what is the cardinality of $C(X,Y)$ in terms of that of $X$ and $Y$?\fullmarks{2}
+  \item For elements $a$ and $b$, and sets $A$ and $B$ such that $\{a,b\} \cap (A \cup B) = \emptyset$, consider the functions
+    \begin{itemize}
+    \item $f: C(A \cup \{a\}, B \cup \{b\}) \rightarrow C(A,B) \uplus C(A,B \cup \{b\})$ given by
+      \[
+      f(S) = \begin{cases}
+        (0,S \setminus \{a\}) & , a \in S \\
+        (1,S) & , s \notin S
+          \end{cases}
+      \]
+      and
+    \item
+      $g : C(A,B) \uplus C(A,B \cup \{b\}) \rightarrow C(A \cup \{a\}, B \cup \{b\})$ given by
+      \[
+      g(i,S) = \begin{cases}
+        S \cup \{a\} &, i = 0 \\
+        S &, i = 1
+      \end{cases}
+      \]
+    \end{itemize}
+
+    Prove either that $g \circ f = \mbox{id}$ or that $f \circ g = \mbox{id}$.\fullmarks{6}
+    \end{enumerate}
+  
+\end{enumerate}
+
+%\typeout{Awaiting question 5 on Discrete Mathematics}
+\end{question}
+\end{document}
