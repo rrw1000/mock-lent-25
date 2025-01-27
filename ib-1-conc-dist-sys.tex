@@ -1,18 +1,19 @@
 \documentclass{tripos}
 \begin{document}
-\begin{question}[MockIA,year=2025,paper=2,question=3,author=nobody]{Concurrent and Distributed Systems}
+\begin{question}[MockIB,year=2025,paper=2,question=1,author=rrw]{Concurrent and Distributed Systems}
 %%\emph{\ldots Awaiting question 3 on Concurrent and Distributed Systems}
 \triposset{fullmarks=20}
 \topic{Concurrent and Distributed Systems}
 
 \begin{enumerate}
-\item Give pseudocode for a fair, recursive, MRSW lock using RISC-V \verb|lr|/\verb|sc| semantics and yield:
+\item Give pseudocode for a fair, recursive, MRSW lock using RISC-V \verb|lr|/\verb|sc| semantics and \verb|yield|:
 
 \begin{verbatim}
   lr.w t0, (a0)   # Load-linked from (a0) to t0
 
   sc.w t0, a2, (a0) # Attempt to write the value a2 to (a0)
-                    # and release the reservation. If you succeeded,
+                    # and release the reservation.
+                    # If you succeeded,
                     # set t0=0, else set t0!=0.
 
   yield(a0)         # Yield until a0 is (possibly) touched.

@@ -8,7 +8,7 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{tripos}
-    [2024/02/02 Tripos exam class (Markus Kuhn)]
+    [2025/02/02 Tripos exam class (Markus Kuhn)]
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
 \ExecuteOptions{draft}
@@ -223,6 +223,9 @@
       from each of Sections A, B and C, and \textbf{two} questions
       from Section D.
     }}}
+\triposset{structure/1a1b1c/.style={rubrics={Answer \textbf{one} question
+      from each of Sections A, B and C.
+    }}}
 \triposset{structure/5q/.style={rubrics={
       Answer \textbf{five} questions.}}}
 \triposset{structure/3q/.style={rubrics={
@@ -250,7 +253,7 @@
 \triposset{signoff style/.style={newsheet=true}}
 \triposset{CST/.style={
     subject=COMPUTER SCIENCE MOCK \ Paper \arabic{paper},
-    code=CST,subtitle=,totalmarks=20,time=2.00,endtime=4.00,attempts=three,
+    code=CST,subtitle=,totalmarks=20,time=1.30,endtime=3.30,attempts=three,
     titlewarning={You may not start to read the
     questions printed on the subsequent pages of this question paper
     until instructed that you may do so by the Invigilator},
@@ -263,6 +266,9 @@
 \triposset{MockIB/.style={
     CST,code=CSTX1,
     structure=3q,title=COMPUTER SCIENCE TRIPOS MOCK \ Part I{\absize B}}}
+\triposset{CSTpartIAM/.style={
+    CST,code=CSTM0,
+    structure=1a1b1c,title=COMPUTER SCIENCE TRIPOS \ Part I{\absize A}}}
 \triposset{CSTpartIA/.style={
     CST,code=CST0,
     structure=1abc2d,title=COMPUTER SCIENCE TRIPOS \ Part I{\absize A}}}

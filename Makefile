@@ -57,13 +57,13 @@ all: mock-ia.pdf mock-ib.pdf
 
 mock-ia.pdf: \
 	tripos.cls \
-	ia-1-foundations.tex ia-2-oop.tex  ia-3-digital-electronics.tex \
-        ia-4-discrete-mathematics.tex  ia-5-databases.tex  ia-6-intro-graphics.tex
+	ia-1-foundations.tex ia-3-oop.tex  ia-5-digital-electronics.tex \
+        ia-2-discrete-mathematics.tex  ia-4-databases.tex  ia-6-intro-graphics.tex
 
 mock-ib.pdf: \
 	tripos.cls \
-	ib-1-semantics.tex  ib-2-candcplusplus.tex  ib-3-conc-dist-sys.tex  ib-4-intro-comp-arch.tex \
-        ib-5-data-science.tex  ib-6-econ-law.tex  ib-7-further-graphics.tex
+	ib-7-semantics.tex  ib-6-candcplusplus.tex  ib-1-conc-dist-sys.tex  ib-5-intro-comp-arch.tex \
+        ib-2-data-science.tex  ib-3-econ-law.tex  ib-4-further-graphics.tex
 
 # show a table of contents
 toc:
